@@ -1,0 +1,29 @@
+{
+  "name": "log2log4j",
+  "description": "Replaces java.util.logging with org.apache.logging (Apache Log4J)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "log2log4j": "index.js"
+  },
+  "scripts": {
+    "start": "node .",
+    "build": "pkg . --out-path bin"
+  },
+  "pkg": {
+    "targets": [
+      "node10-linux-x64",
+      "node10-win-x64"
+    ],
+    "outPath": "bin/"
+  },
+  "dependencies": {
+    "kleur": "^3.0.2",
+    "prompts": "^2.0.1",
+    "tiny-glob": "^0.2.6"
+  },
+  "devDependencies": {
+    "pkg": "^4.3.7"
+  }
+}
